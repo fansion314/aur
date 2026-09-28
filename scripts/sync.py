@@ -258,6 +258,11 @@ def sync(project, github):
             dest.parent.mkdir(parents=True, exist_ok=True)
             dest.write_bytes(content)
         changed.append(name)
+    for retired in set(old.get('packages', {})) - set(proposals):
+        safe_path(retired)
+        target = ROOT/'packages'/retired
+        if target.is_dir():
+            shutil.rmtree(target)
     state_path.parent.mkdir(exist_ok=True)
     state_path.write_text(json.dumps({'repository': project['repository'], 'reference': reference, 'packages': records}, indent=2) + '\n')
     print(project['id'] + ': ' + ', '.join(changed))

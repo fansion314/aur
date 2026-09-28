@@ -33,18 +33,21 @@ paru -Syu
 
 # 推荐下载预构建应用，在本机完成 pacman 打包
 paru -S fansion314/dnr-bin fansion314/pi-dnr-bin fansion314/etcher-dnr-bin
-paru -S fansion314/motrix2-bin fansion314/dsh-electron-bin
+paru -S fansion314/motrix-electron-bin fansion314/dsh-electron-bin
 paru -S fansion314/bitwarden-electron-bin fansion314/obsidian-electron-bin
 
 # 需要独立应用打包器
 paru -S fansion314/dnc-bin
 
 # 选择非 bin 版本的示例（同一应用只选一种变体）
-paru -S fansion314/motrix2
+paru -S fansion314/motrix-electron
 ```
 
 `-bin` 不会编译应用，但仍会执行已审阅的 PKGBUILD、校验下载、生成本机
-`.pkg.tar.zst` 并调用 pacman 安装。非 bin 版本保留各项目自己的构建方式；
+`.pkg.tar.zst` 并调用 pacman 安装。新发布的 `.pkg.tar.zst` Release 资产也可下载后
+直接执行 `sudo pacman -U ./<文件名>.pkg.tar.zst`，省去 AUR 安装路径的重新打包。
+通过 `paru -S` 安装仍由 `makepkg` 重打包；若希望自动升级且不重打包，需要另建
+pacman 二进制仓库。非 bin 版本保留各项目自己的构建方式；
 Bitwarden/Obsidian 的非 bin 配方也是从官方应用重新整理打包，并非编译其全部源码。
 配置这个仓库不会在后台无人值守升级；运行 `paru -Syu` 才执行升级。
 
@@ -55,7 +58,7 @@ Bitwarden/Obsidian 的非 bin 配方也是从官方应用重新整理打包，�
 | [dnr](https://github.com/fansion314/dnr) | `dnr`、`dnr-cef`、`dnr-webview`、`dnc` | `dnr-bin`、`dnr-cef-bin`、`dnr-webview-bin`、`dnc-bin` |
 | [Pi](https://github.com/fansion314/pi) | `pi-dnr` | `pi-dnr-bin` |
 | [Etcher](https://github.com/fansion314/etcher) | `etcher-dnr` | `etcher-dnr-bin` |
-| [Motrix](https://github.com/fansion314/Motrix) | `motrix2` | `motrix2-bin` |
+| [Motrix](https://github.com/fansion314/Motrix) | `motrix-electron` | `motrix-electron-bin` |
 | [DeepSeek Harness](https://github.com/fansion314/deepseek-harness) | `dsh-electron` | `dsh-electron-bin` |
 | [Bitwarden](https://github.com/fansion314/bitwarden) | `bitwarden-electron` | `bitwarden-electron-bin` |
 | [Obsidian](https://github.com/fansion314/obsidian) | `obsidian-electron` | `obsidian-electron-bin` |

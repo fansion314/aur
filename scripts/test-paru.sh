@@ -24,4 +24,4 @@ actual = {line.split()[1] for line in open(sys.argv[1]) if line.startswith('fans
 assert expected == actual, (expected - actual, actual - expected)
 print(f'PARU_REPOSITORY_OK: {len(actual)} source and binary recipes')
 PY
-"$paru" --pkgbuilds -Si fansion314/dnc-bin fansion314/pi-dnr-bin fansion314/motrix2
+"$paru" --pkgbuilds -Si fansion314/dnc-bin fansion314/pi-dnr-bin fansion314/motrix-electron
