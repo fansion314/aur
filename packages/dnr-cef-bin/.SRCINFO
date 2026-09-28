@@ -1,6 +1,6 @@
 pkgbase = dnr-cef-bin
 	pkgdesc = Shared Deno runtime (system CEF, prebuilt)
-	pkgver = 0.4.3
+	pkgver = 0.5.0
 	pkgrel = 1
 	url = https://github.com/fansion314/dnr
 	arch = x86_64
@@ -18,19 +18,19 @@ pkgbase = dnr-cef-bin
 	depends = cef
 	optdepends = libayatana-appindicator: system tray support
 	optdepends = libnotify: desktop notifications via notify-send
-	provides = dnr=0.4.3
-	provides = dnr-cef=0.4.3
+	provides = dnr=0.5.0
+	provides = dnr-cef=0.5.0
 	conflicts = dnr
 	conflicts = dnr-bin
 	conflicts = dnr-cef
 	conflicts = dnr-webview
 	conflicts = dnr-webview-bin
-	noextract = dnr-cef-0.4.3-1-x86_64.pkg.tar.zst
+	noextract = dnr-cef-0.5.0-1-x86_64.pkg.tar.zst
 	options = !strip
 	options = !debug
-	source = https://github.com/fansion314/dnr/releases/download/v0.4.3/dnr-cef-0.4.3-1-x86_64.pkg.tar.zst
-	source = https://github.com/fansion314/dnr/releases/download/v0.4.3/dnr-cef-0.4.3-1-x86_64.pkg.tar.zst.sha256
-	sha256sums = 885dd55675c1ae7678661303406ce94d43a780bbc54ad5b900ebe9343e253876
-	sha256sums = e2cc5224cbabf1ec5d0548af5f2112b2489de9521b6dc5826b500ac9324c0306
+	source = https://github.com/fansion314/dnr/releases/download/v0.5.0/dnr-cef-0.5.0-1-x86_64.pkg.tar.zst
+	source = https://github.com/fansion314/dnr/releases/download/v0.5.0/dnr-cef-0.5.0-1-x86_64.pkg.tar.zst.sha256
+	sha256sums = 2761be005c923625589f89dadf2880adc4ffbe6178830adfb2753377cd52a7cf
+	sha256sums = a0d078abd5da09cf22d2c3682e5dd6254b22442b971c841cd36c6f1f4b6ce830
 
 pkgname = dnr-cef-bin
