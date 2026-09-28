@@ -1,0 +1,30 @@
+pkgbase = pi-dnr-bin
+	pkgdesc = Pi coding agent for the shared dnr runtime (prebuilt)
+	pkgver = 0.87.1
+	pkgrel = 3
+	url = https://github.com/fansion314/pi
+	arch = x86_64
+	license = MIT
+	depends = dnr>=0.4.0
+	depends = bash
+	depends = glibc
+	depends = libxcb
+	depends = ripgrep
+	depends = fd
+	optdepends = git: install Git-based extensions and work with repositories
+	optdepends = npm: install dependencies for npm and Git extensions
+	optdepends = wl-clipboard: Wayland clipboard support
+	optdepends = xclip: X11 clipboard writes and fallback reads
+	provides = pi-dnr=0.87.1
+	provides = pi-coding-agent=0.87.1
+	conflicts = pi-dnr
+	conflicts = pi-coding-agent
+	noextract = pi-dnr-0.87.1-3-x86_64.pkg.tar.zst
+	options = !strip
+	options = !debug
+	source = https://github.com/fansion314/pi/releases/download/pi-dnr-v0.87.1-3/pi-dnr-0.87.1-3-x86_64.pkg.tar.zst
+	source = https://github.com/fansion314/pi/releases/download/pi-dnr-v0.87.1-3/pi-dnr-0.87.1-3-x86_64.pkg.tar.zst.sha256
+	sha256sums = dfb4d3e652a513d60662c98bf08023c8814fc64b330b0fbcfbcd97ae098a0c4c
+	sha256sums = 0dba2676805fe3b5fb912797720d53f1748f902bb99430aaf7e6f459f18c56c6
+
+pkgname = pi-dnr-bin

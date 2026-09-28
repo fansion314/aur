@@ -1,0 +1,28 @@
+{
+  "repository": "fansion314/Motrix",
+  "reference": "arch-v2.0.0-beta.41-2",
+  "packages": {
+    "motrix2": {
+      "version": "0:2.0.0beta.41-2",
+      "files": {
+        ".SRCINFO": "87186a282a7085a3e3223f3ec6c1059e9d469e3a2e20b1382b5b45ecf5ab368b",
+        "PKGBUILD": "56dd949737067ecd6f9bdab9f166313e5f2107be8a6cc54a89c552597bc58271"
+      },
+      "assets": []
+    },
+    "motrix2-bin": {
+      "version": "0:2.0.0beta.41-2",
+      "files": {
+        ".SRCINFO": "6efb04f649760843efcf17ca4778a3a84dcca9e02dd2432a2a808f8f5c19f819",
+        "PKGBUILD": "ba672142c6044376a67b16acdfe131464aac16c66a6f809dbacee5c42acc5175"
+      },
+      "assets": [
+        {
+          "url": "https://github.com/fansion314/Motrix/releases/download/arch-v2.0.0-beta.41-2/motrix2-2.0.0-beta.41-2-x86_64.asar",
+          "sha256": "a8524e30d0aecf9047325a323382b664350e770f0d326aa333bae47bd8bdf6e3",
+          "size": 48480065
+        }
+      ]
+    }
+  }
+}

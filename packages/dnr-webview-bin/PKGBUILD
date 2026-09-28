@@ -1,0 +1,41 @@
+# Maintainer: Peilin Fan <peilin.fan@foxmail.com>
+pkgname=dnr-webview-bin
+pkgver=0.4.2
+pkgrel=1
+pkgdesc='Shared Deno runtime (WebView, prebuilt)'
+arch=('x86_64')
+url='https://github.com/fansion314/dnr'
+license=('MIT' 'Apache-2.0' 'BSD-3-Clause')
+depends=('glibc' 'gcc-libs' 'gtk3' 'glib2' 'cairo' 'zlib' 'webkit2gtk-4.1' 'libsoup3')
+optdepends=('libayatana-appindicator: system tray support'
+            'libnotify: desktop notifications via notify-send')
+provides=("dnr=$pkgver" "dnr-webview=$pkgver")
+conflicts=('dnr' 'dnr-bin' 'dnr-cef' 'dnr-cef-bin' 'dnr-webview')
+options=('!strip' '!debug')
+_package="dnr-webview-$pkgver-1-x86_64.pkg.tar.zst"
+_release="$url/releases/download/v$pkgver"
+source=("$_release/$_package" "$_release/$_package.sha256")
+noextract=("$_package")
+# CI creates the archive after this tag exists. Verify its release checksum below.
+sha256sums=('SKIP' 'SKIP')
+
+prepare() {
+    cd "$srcdir"
+    local digest filename extra
+    read -r digest filename extra < "$_package.sha256"
+    [[ $digest =~ ^[0-9a-f]{64}$ && $filename == "$_package" && -z $extra ]] || return 1
+    printf '%s  %s\n' "$digest" "$_package" | sha256sum --check --status || return 1
+    mkdir -p payload
+    bsdtar -xf "$_package" -C payload usr/bin/dnr usr/share/licenses/dnr-webview usr/share/doc/dnr-webview
+}
+
+package() {
+    cd "$srcdir/payload"
+    install -Dm755 usr/bin/dnr "$pkgdir/usr/bin/dnr"
+    install -d "$pkgdir/usr/share/licenses/$pkgname" "$pkgdir/usr/share/doc/$pkgname"
+    cp -r --no-preserve=ownership usr/share/licenses/dnr-webview/. "$pkgdir/usr/share/licenses/$pkgname/"
+    cp -r --no-preserve=ownership usr/share/doc/dnr-webview/. "$pkgdir/usr/share/doc/$pkgname/"
+}
+
+# Pinned by fansion314/aur after verifying the published release bytes.
+sha256sums=('13014cdc03d66cd9ba045dae122b6fba17a28e5be068e55309bd90d2ab345a23' '16aba055750f06cb7614367b0f1af1c115a9a594f68117eb3d6a37a3ffce1c9a')

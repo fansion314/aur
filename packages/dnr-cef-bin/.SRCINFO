@@ -1,0 +1,36 @@
+pkgbase = dnr-cef-bin
+	pkgdesc = Shared Deno runtime (system CEF, prebuilt)
+	pkgver = 0.4.2
+	pkgrel = 1
+	url = https://github.com/fansion314/dnr
+	arch = x86_64
+	license = MIT
+	license = Apache-2.0
+	license = BSD-3-Clause
+	depends = glibc
+	depends = gcc-libs
+	depends = gtk3
+	depends = glib2
+	depends = cairo
+	depends = zlib
+	depends = libx11
+	depends = libxi
+	depends = cef
+	optdepends = libayatana-appindicator: system tray support
+	optdepends = libnotify: desktop notifications via notify-send
+	provides = dnr=0.4.2
+	provides = dnr-cef=0.4.2
+	conflicts = dnr
+	conflicts = dnr-bin
+	conflicts = dnr-cef
+	conflicts = dnr-webview
+	conflicts = dnr-webview-bin
+	noextract = dnr-cef-0.4.2-1-x86_64.pkg.tar.zst
+	options = !strip
+	options = !debug
+	source = https://github.com/fansion314/dnr/releases/download/v0.4.2/dnr-cef-0.4.2-1-x86_64.pkg.tar.zst
+	source = https://github.com/fansion314/dnr/releases/download/v0.4.2/dnr-cef-0.4.2-1-x86_64.pkg.tar.zst.sha256
+	sha256sums = 76214c803d4319b73db5e4ceb277842854585aabf0a6cee097fa0eca2130931b
+	sha256sums = dadecb9522c991d1ff3f6cba8ab62fba76ff6157ea8a2ac559070e2eb4dd837b
+
+pkgname = dnr-cef-bin

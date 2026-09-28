@@ -1,0 +1,32 @@
+pkgbase = dnr-bin
+	pkgdesc = Shared Deno runtime (system CEF + WebView, prebuilt)
+	pkgver = 0.4.2
+	pkgrel = 1
+	url = https://github.com/fansion314/dnr
+	arch = x86_64
+	license = MIT
+	license = Apache-2.0
+	license = BSD-3-Clause
+	depends = glibc
+	depends = gcc-libs
+	depends = zlib
+	optdepends = cef: system CEF desktop backend (also requires gtk3)
+	optdepends = gtk3: native desktop UI for the CEF backend
+	optdepends = webkit2gtk-4.1: WebView desktop backend (auto fallback)
+	optdepends = libayatana-appindicator: system tray support
+	optdepends = libnotify: desktop notifications via notify-send
+	provides = dnr=0.4.2
+	conflicts = dnr
+	conflicts = dnr-cef
+	conflicts = dnr-cef-bin
+	conflicts = dnr-webview
+	conflicts = dnr-webview-bin
+	noextract = dnr-0.4.2-1-x86_64.pkg.tar.zst
+	options = !strip
+	options = !debug
+	source = https://github.com/fansion314/dnr/releases/download/v0.4.2/dnr-0.4.2-1-x86_64.pkg.tar.zst
+	source = https://github.com/fansion314/dnr/releases/download/v0.4.2/dnr-0.4.2-1-x86_64.pkg.tar.zst.sha256
+	sha256sums = 596fe9f2bd8dedf598bc195dbb0ee0e7e805f0bb44ecee4f7b2b3a43819beb93
+	sha256sums = 7c150e09804dee75ddb9cf98ff1c4a5d9f1f8444596d02ca28ab4477e84a147d
+
+pkgname = dnr-bin

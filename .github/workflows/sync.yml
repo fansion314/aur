@@ -1,0 +1,66 @@
+name: Sync and validate package recipes
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 * * * *'
+  push:
+    paths: ['sources.json', 'scripts/**', '.github/workflows/sync.yml']
+permissions:
+  contents: read
+concurrency:
+  group: recipe-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Test synchronization rules
+        run: python3 -m unittest discover -s tests -v
+      - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5
+        with:
+          path: .cache/downloads
+          key: release-inputs-${{ hashFiles('state/*.json') }}
+          restore-keys: release-inputs-
+      - name: Synchronize public recipes and verify binary assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 -u scripts/sync.py
+      - name: Decide validation scope
+        id: scope
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          if [[ "$EVENT" != schedule ]]; then
+            python3 -c 'import json,pathlib; m=json.load(open("sources.json")); pathlib.Path(".cache/changed.json").write_text(json.dumps([n for p in m["projects"] for n in p["packages"]]))'
+          fi
+          echo "changed=$(python3 -c 'import json; print(str(bool(json.load(open(".cache/changed.json")))).lower())')" >> "$GITHUB_OUTPUT"
+      - name: Validate all metadata and build changed binary packages
+        if: steps.scope.outputs.changed == 'true'
+        run: |
+          set -o pipefail
+          docker run --rm --volume "$PWD:/repo" --workdir /repo \
+            --env "BUILD_UID=$(id -u)" ghcr.io/archlinux/archlinux:base-devel \
+            bash scripts/ci-validate.sh 2>&1 | tee .cache/validation.log
+      - name: Save validation evidence
+        if: always() && steps.scope.outputs.changed == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: recipe-validation
+          path: .cache/validation.log
+          if-no-files-found: ignore
+      - name: Commit only validated recipe changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [[ -z $(git status --porcelain -- packages state) ]]; then exit 0; fi
+          git add -- packages state
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -m 'chore: sync verified package recipes'
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 | tr -d '\n')
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:main
