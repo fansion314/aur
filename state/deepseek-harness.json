@@ -1,26 +1,26 @@
 {
   "repository": "fansion314/deepseek-harness",
-  "reference": "3c96adca36ac6b9ee5e2e19222ae1d6040028e3f",
+  "reference": "ea681edb8735c4a338cce0bb5637b0c5f02eb05e",
   "packages": {
     "dsh-electron": {
-      "version": "0:0.1.7rc.2-6",
+      "version": "0:0.1.7rc.2-7",
       "files": {
-        ".SRCINFO": "e4f8f7e7dc1fd80bfc613d97853bc6029d7989de3d426200364ce88ca19fb4ba",
-        "PKGBUILD": "82013b5a2f9480c8f3f4b996d58ef9accc8f73775526d122e5bda9210b97c1f3"
+        ".SRCINFO": "aca0225b8422a1738f64d96cb051df214a5d0187ea9b16d8d3c5e8d3f7a0ee0e",
+        "PKGBUILD": "283ab0598a069d4c3914efbeea9cb04119424d24a904bf0f854b4beee93b87bb"
       },
       "assets": []
     },
     "dsh-electron-bin": {
-      "version": "0:0.1.7rc.2-6",
+      "version": "0:0.1.7rc.2-7",
       "files": {
-        ".SRCINFO": "26d336e60f599ab90b242e276e9fe30a4d363bd30a25e1df1bfce355ec5ae300",
-        "PKGBUILD": "cd6bba9cea4fb9914b4bcdb92d3484ea422d4c78bb7f330b5e209753a6aa8fcf"
+        ".SRCINFO": "5aec446ec0316435252c5ee71cb58ee4a7220a4c65c82f5bea364d10b79cf07f",
+        "PKGBUILD": "dcb90f75bce915707862e40750f632d46abb9183d8eae73769a46beddca55404"
       },
       "assets": [
         {
-          "url": "https://github.com/fansion314/deepseek-harness/releases/download/arch-v0.1.7-rc.2-6/dsh-electron-0.1.7-rc.2-6-x86_64.tar.zst",
-          "sha256": "703c48aaecdce0a7dff630f56d90de37ddbf43dc8e20d9c576ab55098eb32def",
-          "size": 88188491
+          "url": "https://github.com/fansion314/deepseek-harness/releases/download/arch-v0.1.7-rc.2-7/dsh-electron-0.1.7rc.2-7-x86_64.pkg.tar.zst",
+          "sha256": "cf1644fca1206949eaccc43caa1e5a34f8aed7f7560138f1f73e35a2ea5e492f",
+          "size": 88324308
         }
       ]
     }

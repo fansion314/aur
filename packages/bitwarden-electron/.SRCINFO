@@ -1,7 +1,7 @@
 pkgbase = bitwarden-electron
 	pkgdesc = Bitwarden official binaries using the latest system Electron
 	pkgver = 2026.9.0
-	pkgrel = 4
+	pkgrel = 5
 	url = https://github.com/bitwarden/clients
 	arch = x86_64
 	license = GPL-3.0-only
@@ -26,6 +26,6 @@ pkgbase = bitwarden-electron
 	source = https://github.com/bitwarden/clients/releases/download/desktop-v2026.9.0/Bitwarden-2026.9.0-amd64.deb
 	source = bitwarden.sh
 	sha256sums = 51066f8fbaf4546626a2e77a9c0d3abfeef7a13685aca046cb30e07ebf3cf979
-	sha256sums = ce273e03837cd5c5e69601f3b2af40f4004f4c710bf72950ba8f81d3235ff732
+	sha256sums = d13e5137334dfda41999aeabff4c29cfe4b1a15bb7d14e5c9ebe7bed7fc8c829
 
 pkgname = bitwarden-electron

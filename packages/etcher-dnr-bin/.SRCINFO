@@ -1,11 +1,11 @@
 pkgbase = etcher-dnr-bin
 	pkgdesc = Etcher image flasher using the shared dnr runtime (prebuilt)
 	pkgver = 2.1.7
-	pkgrel = 5
+	pkgrel = 7
 	url = https://github.com/fansion314/etcher
 	arch = x86_64
 	license = Apache-2.0
-	depends = dnr>=0.4.1
+	depends = dnr>=0.4.3
 	depends = webkit2gtk-4.1
 	depends = gtk3
 	depends = glib2
@@ -25,12 +25,12 @@ pkgbase = etcher-dnr-bin
 	conflicts = etcher-bin
 	conflicts = balena-etcher
 	conflicts = balena-etcher-bin
-	noextract = etcher-dnr-2.1.7-5-x86_64.pkg.tar.zst
+	noextract = etcher-dnr-2.1.7-7-x86_64.pkg.tar.zst
 	options = !strip
 	options = !debug
-	source = https://github.com/fansion314/etcher/releases/download/v2.1.7-dnr.5/etcher-dnr-2.1.7-5-x86_64.pkg.tar.zst
-	source = https://github.com/fansion314/etcher/releases/download/v2.1.7-dnr.5/etcher-dnr-2.1.7-5-x86_64.pkg.tar.zst.sha256
-	sha256sums = 7f3455ba290cb638dc9d8ec4f65b6e1ddccf9b64ce2f8eb5ccab998791b613bb
-	sha256sums = d58b6383f5451d18e87a10dad3508d76f055296dbf7e90e6719638182bf835ee
+	source = https://github.com/fansion314/etcher/releases/download/v2.1.7-dnr.7/etcher-dnr-2.1.7-7-x86_64.pkg.tar.zst
+	source = https://github.com/fansion314/etcher/releases/download/v2.1.7-dnr.7/etcher-dnr-2.1.7-7-x86_64.pkg.tar.zst.sha256
+	sha256sums = 8a197767e06dc64c36fd8a7d5b7e8fe31f9f8c58e4ddb207cda33ffc516f9900
+	sha256sums = 12263a015131b88ba5dd48641c183065a288586e3e00ed365219dc01a412a2bf
 
 pkgname = etcher-dnr-bin

@@ -1,29 +1,29 @@
 {
   "repository": "fansion314/obsidian",
-  "reference": "d9d6eec743b79960553acbd8391c6e3558a274c6",
+  "reference": "1ca8de470fd8ecbf21dc54f978f5430a2a4a4988",
   "packages": {
     "obsidian-electron": {
-      "version": "0:1.13.7-3",
+      "version": "0:1.13.7-8",
       "files": {
-        ".SRCINFO": "d49bfdb719f5eb75bc008bbfb3fe929211335876e0f57c9e652723f37a1500bd",
+        ".SRCINFO": "4e12f1a54325da1faf51810339390dfbd399c61888ecb146a3ff1d49c96dba18",
         "LICENSE-Obsidian": "d9fdc14f9c2fb95bb38310281268fdad413c1b49fa93213df3184f9b0ca1175c",
-        "PKGBUILD": "695f014be1db8340acbe7589942bf469cf9fe46315b7df1eeb56cb59ccb13cd9",
+        "PKGBUILD": "4ac50b7b2addb5a0699c628b9a979e2edfeb0db9d39ba63825794f6c78751aa4",
         "md.obsidian.Obsidian.desktop": "0251425a4f4efdc5efb0384eaee38dd2430107c5a43094877a4fa75b48e43020",
-        "obsidian.sh": "4004fae63ed9236a1c91aa955f3ba7c00d67d6988149179b53575289a46a2902"
+        "obsidian.sh": "5cab5220361350abc9f8faae746366f98f0db97ce9623736e1623f871e2000b9"
       },
       "assets": []
     },
     "obsidian-electron-bin": {
-      "version": "0:1.13.7-3",
+      "version": "0:1.13.7-8",
       "files": {
-        ".SRCINFO": "2b69e053f66a699f94bf6f79d1659972c50bbd9244a2bc75d0f4c83760cefa47",
-        "PKGBUILD": "1330cb7ee5fc9c6bba3dcb43a021f8a3d9bdb426c880227edb079e8081f6cae1"
+        ".SRCINFO": "6d1cbc3d82d06643c27ef27ba3004b8d6ab0b9c1497d7d685b758e5f58ea3e18",
+        "PKGBUILD": "047a7e43329fd2b6a8971219e193b39e2097de3ea1116517be74b67c605e757d"
       },
       "assets": [
         {
-          "url": "https://github.com/fansion314/obsidian/releases/download/v1.13.7-3/obsidian-electron-1.13.7-3-x86_64.tar.gz",
-          "sha256": "eb53bb64d3618c6c523a1bd5e7fadd0296296695e93337cd7f79842c7d509761",
-          "size": 8949080
+          "url": "https://github.com/fansion314/obsidian/releases/download/v1.13.7-8/obsidian-electron-1.13.7-8-x86_64.pkg.tar.zst",
+          "sha256": "c26488ecae657a0429aeac81dee9c8f3575e17a8e2378ba31cd7767b2d264377",
+          "size": 8445340
         }
       ]
     }
