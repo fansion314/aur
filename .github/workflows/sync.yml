@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '23 * * * *'
   push:
+    branches: [main]
     paths: ['sources.json', 'scripts/**', '.github/workflows/sync.yml']
 permissions:
   contents: read
@@ -12,6 +13,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   sync:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     permissions:
