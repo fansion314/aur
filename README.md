@@ -12,7 +12,6 @@
 [fansion314]
 Url = https://github.com/fansion314/aur.git
 Path = packages
-Depth = 1
 ```
 
 如果原来没有用户级配置，希望继续使用系统配置，可以创建用户配置：
@@ -23,7 +22,6 @@ Include = /etc/paru.conf
 [fansion314]
 Url = https://github.com/fansion314/aur.git
 Path = packages
-Depth = 1
 ```
 
 不要覆盖已有配置。使用了 `Mode` 选项时，确保包含 `pkgbuilds`；不要打开
