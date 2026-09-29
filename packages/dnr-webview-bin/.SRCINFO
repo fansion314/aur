@@ -1,6 +1,6 @@
 pkgbase = dnr-webview-bin
 	pkgdesc = Shared Deno runtime (WebView, prebuilt)
-	pkgver = 0.5.1
+	pkgver = 0.5.2
 	pkgrel = 1
 	url = https://github.com/fansion314/dnr
 	arch = x86_64
@@ -18,19 +18,19 @@ pkgbase = dnr-webview-bin
 	optdepends = libxss: X11 session idle time monitoring
 	optdepends = libayatana-appindicator: system tray support
 	optdepends = libnotify: desktop notifications via notify-send
-	provides = dnr=0.5.1
-	provides = dnr-webview=0.5.1
+	provides = dnr=0.5.2
+	provides = dnr-webview=0.5.2
 	conflicts = dnr
 	conflicts = dnr-bin
 	conflicts = dnr-cef
 	conflicts = dnr-cef-bin
 	conflicts = dnr-webview
-	noextract = dnr-webview-0.5.1-1-x86_64.pkg.tar.zst
+	noextract = dnr-webview-0.5.2-1-x86_64.pkg.tar.zst
 	options = !strip
 	options = !debug
-	source = https://github.com/fansion314/dnr/releases/download/v0.5.1/dnr-webview-0.5.1-1-x86_64.pkg.tar.zst
-	source = https://github.com/fansion314/dnr/releases/download/v0.5.1/dnr-webview-0.5.1-1-x86_64.pkg.tar.zst.sha256
-	sha256sums = a90c5598b948fc4c0972a60e430648b523650a85e3d0b38046c77143d4281072
-	sha256sums = eb3c9aa1085b3522e38121750ce0267ed9de508c09d3bcb8fed8f04e36c36018
+	source = https://github.com/fansion314/dnr/releases/download/v0.5.2/dnr-webview-0.5.2-1-x86_64.pkg.tar.zst
+	source = https://github.com/fansion314/dnr/releases/download/v0.5.2/dnr-webview-0.5.2-1-x86_64.pkg.tar.zst.sha256
+	sha256sums = 708b5e7ff188ee42a7cd0bcae92b652525bc29388f6d763553f7c5306fd1268f
+	sha256sums = 92a1427a0b446d833193094c6ca16cd0d2b2c1332243d84c08d9ebb2a3ab9c62
 
 pkgname = dnr-webview-bin

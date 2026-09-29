@@ -1,6 +1,6 @@
 # Maintainer: Peilin Fan <peilin.fan@foxmail.com>
 pkgname=dnr-bin
-pkgver=0.5.1
+pkgver=0.5.2
 pkgrel=1
 pkgdesc='Shared Deno runtime (system CEF + WebView, prebuilt)'
 arch=('x86_64')
@@ -42,4 +42,4 @@ package() {
 }
 
 # Pinned by fansion314/aur after verifying the published release bytes.
-sha256sums=('bb37deabe4c19264652c7bc9cf49069306a59bd2bb9ea3b7ea70af894de14f51' 'cff5cf4452f89b1f53d8bc3bbb64268e4e80c648ca61d4fcf0de8bbd7830b2bd')
+sha256sums=('d5f9e2a59305f8bd97263d8469ff8274b84553d36e7dde08cf9cde5312249d07' 'aefcef324549fc25737bef962c7512333ff3ec93da72d382ea93c2101754d9c4')
