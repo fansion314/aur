@@ -1,6 +1,6 @@
 # Maintainer: Peilin Fan <peilin.fan@foxmail.com>
 pkgname=pi-dnr-bin
-pkgver=1.0.0
+pkgver=1.0.2
 pkgrel=1
 pkgdesc='Pi coding agent for the shared dnr runtime (prebuilt)'
 arch=('x86_64')
@@ -45,4 +45,4 @@ package() {
 }
 
 # Pinned by fansion314/aur after verifying the published release bytes.
-sha256sums=('e69b6f6781a0aace3144f3dc4b502aaaed84043a7251324f1582ad9f283eff85' '120fc8080ca909ac2b4fc6035920f6dc2873985aba90c23db79f6da630a411b6')
+sha256sums=('7a4191b4414da06f0930149207bf11ac8306e2b1bc11f75fa399389d4e67c588' '935d9db45a16c6390152157170a5d6465a4dcdaa487a4d9f1312a111acfded7a')
