@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate every recipe's metadata, and package selected binaries without installing them."""
+"""Validate recipe metadata, and package selected binaries without installing them."""
 import argparse
 import json
 import os
@@ -98,20 +98,23 @@ def smoke(packages):
 
 
 def main():
+    projects = json.loads((ROOT/'sources.json').read_text())['projects']
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--build-bins', action='store_true')
     parser.add_argument('--changed-only', action='store_true')
+    parser.add_argument('--project', choices=[p['id'] for p in projects])
     args = parser.parse_args()
     if sys.platform != 'linux' or os.geteuid() == 0:
         parser.error('Run as an unprivileged user in Arch Linux x86_64')
-    configured = {name for p in json.loads((ROOT/'sources.json').read_text())['projects'] for name in p['packages']}
+    configured = {name for p in projects for name in p['packages']}
     actual = {p.name for p in (ROOT/'packages').iterdir() if (p/'PKGBUILD').exists()}
     if configured != actual:
         raise ValueError('Package inventory differs from sources.json')
+    selected = {name for p in projects if not args.project or p['id'] == args.project for name in p['packages']}
     changed_file = ROOT/'.cache/changed.json'
     changed = set(json.loads(changed_file.read_text())) if args.changed_only else configured
     packages = {}
-    for name in sorted(configured):
+    for name in sorted(selected):
         path = ROOT/'packages'/name
         validate_recipe(path)
         if args.build_bins and name.endswith('-bin') and name in changed:

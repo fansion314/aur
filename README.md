@@ -79,11 +79,13 @@ dnr 默认是双后端，两个单后端版本为可选项，不能同时安装�
 2. 验证本地辅助文件和所有 bin 输入的校验和，核对 GitHub asset digest；有
    独立 `.sha256` 文件时也交叉验证。源配方中的 bin `SKIP` 会替换为真实 SHA-256。
    预构建内容继续从原项目 GitHub Release 下载，不复制到本仓库。
-3. 在 Arch x86_64 中用非 root 用户运行 `makepkg --printsrcinfo`，核对全部配方，
+3. 在 Arch x86_64 中用非 root 用户运行 `makepkg --printsrcinfo`，核对选定范围的配方，
    使用 pacman 的 `vercmp` 拒绝降级。构建发生变化的 bin 包并核对包名、版本、架构和
    非空应用文件。dnr/dnc/Pi 同时构建时还运行基础运行时烟雾检查。
 4. 全部通过后才提交 `packages/` 和 `state/`。没有配方变更时跳过打包，不产生空提交。
-   失败保留上一版，日志在 Actions；普通分支推送或手动运行会验证所有 bin 配方。
+   失败保留上一版，日志在 Actions；普通分支推送或默认手动运行会验证所有 bin 配方。
+   手动运行可选择 `project`，只同步并验证该项目的全部配方及 bin 包，避免其他项目
+   尚未发布完整资产时阻塞本项目；默认 `all` 保留全量行为。
 
 Motrix beta 与 DeepSeek rc 是这些项目当前维护的发布通道，按其配方与正式发布资产同步。
 只有提交 `pkgver`/`pkgrel` 更新并发布所需资产后，用户的 `paru -Syu` 才会看到升级；
@@ -102,6 +104,7 @@ python3 scripts/sync.py motrix      # 单项目同步
 # Arch Linux 非 root 用户：
 python3 scripts/validate.py --build-bins
 gh workflow run sync.yml -R fansion314/aur
+gh workflow run sync.yml -R fansion314/aur -f project=dnr
 ```
 
 `packages/` 与 `state/` 为自动生成；修复优先提交到对应源仓库，再同步。同步状态记录

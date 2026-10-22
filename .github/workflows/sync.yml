@@ -1,6 +1,12 @@
 name: Sync and validate package recipes
 on:
   workflow_dispatch:
+    inputs:
+      project:
+        description: Project to synchronize and validate
+        type: choice
+        default: all
+        options: [all, dnr, pi, etcher, motrix, deepseek-harness, bitwarden, obsidian]
   schedule:
     - cron: '23 * * * *'
   push:
@@ -32,22 +38,29 @@ jobs:
       - name: Synchronize public recipes and verify binary assets
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python3 -u scripts/sync.py
+          PROJECT: ${{ inputs.project || 'all' }}
+        run: |
+          args=()
+          if [[ "$PROJECT" != all ]]; then args+=("$PROJECT"); fi
+          python3 -u scripts/sync.py "${args[@]}"
       - name: Decide validation scope
         id: scope
         env:
           EVENT: ${{ github.event_name }}
+          PROJECT: ${{ inputs.project || 'all' }}
         run: |
           if [[ "$EVENT" != schedule ]]; then
-            python3 -c 'import json,pathlib; m=json.load(open("sources.json")); pathlib.Path(".cache/changed.json").write_text(json.dumps([n for p in m["projects"] for n in p["packages"]]))'
+            python3 -c 'import json,os,pathlib; m=json.load(open("sources.json")); pathlib.Path(".cache/changed.json").write_text(json.dumps([n for p in m["projects"] if os.environ["PROJECT"] in ("all", p["id"]) for n in p["packages"]]))'
           fi
           echo "changed=$(python3 -c 'import json; print(str(bool(json.load(open(".cache/changed.json")))).lower())')" >> "$GITHUB_OUTPUT"
-      - name: Validate all metadata and build changed binary packages
+      - name: Validate selected metadata and build changed binary packages
         if: steps.scope.outputs.changed == 'true'
+        env:
+          VALIDATE_PROJECT: ${{ inputs.project || 'all' }}
         run: |
           set -o pipefail
           docker run --rm --volume "$PWD:/repo" --workdir /repo \
-            --env "BUILD_UID=$(id -u)" ghcr.io/archlinux/archlinux:base-devel \
+            --env "BUILD_UID=$(id -u)" --env VALIDATE_PROJECT ghcr.io/archlinux/archlinux:base-devel \
             bash scripts/ci-validate.sh 2>&1 | tee .cache/validation.log
       - name: Save validation evidence
         if: always() && steps.scope.outputs.changed == 'true'
