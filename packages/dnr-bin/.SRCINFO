@@ -1,6 +1,6 @@
 pkgbase = dnr-bin
 	pkgdesc = Shared Deno runtime (system CEF + WebView, prebuilt)
-	pkgver = 0.5.4
+	pkgver = 0.5.5
 	pkgrel = 1
 	url = https://github.com/fansion314/dnr
 	arch = x86_64
@@ -16,18 +16,18 @@ pkgbase = dnr-bin
 	optdepends = webkit2gtk-4.1: WebView desktop backend (auto fallback)
 	optdepends = libayatana-appindicator: system tray support
 	optdepends = libnotify: desktop notifications via notify-send
-	provides = dnr=0.5.4
+	provides = dnr=0.5.5
 	conflicts = dnr
 	conflicts = dnr-cef
 	conflicts = dnr-cef-bin
 	conflicts = dnr-webview
 	conflicts = dnr-webview-bin
-	noextract = dnr-0.5.4-1-x86_64.pkg.tar.zst
+	noextract = dnr-0.5.5-1-x86_64.pkg.tar.zst
 	options = !strip
 	options = !debug
-	source = https://github.com/fansion314/dnr/releases/download/v0.5.4/dnr-0.5.4-1-x86_64.pkg.tar.zst
-	source = https://github.com/fansion314/dnr/releases/download/v0.5.4/dnr-0.5.4-1-x86_64.pkg.tar.zst.sha256
-	sha256sums = c75006e2997130a77ace0ee6a20a1d9361894a257e308c68e071f0bab9b75bd5
-	sha256sums = bf0f11590b33c870f64f7689359281cdc678e4c96e925fb70401e7f5bfa14de7
+	source = https://github.com/fansion314/dnr/releases/download/v0.5.5/dnr-0.5.5-1-x86_64.pkg.tar.zst
+	source = https://github.com/fansion314/dnr/releases/download/v0.5.5/dnr-0.5.5-1-x86_64.pkg.tar.zst.sha256
+	sha256sums = 81c41362d9155f85cf1226dabf3b1f0502a980541459461b34041f39a3f26e74
+	sha256sums = 8e52cf165500f048305162a1a15adc82c697fc24f442e652cd6afb4072f01b77
 
 pkgname = dnr-bin

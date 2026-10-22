@@ -1,6 +1,6 @@
 # Maintainer: Peilin Fan <peilin.fan@foxmail.com>
 pkgname=dnc-bin
-pkgver=0.5.4
+pkgver=0.5.5
 pkgrel=1
 pkgdesc='Lightweight application packager for the shared dnr runtime (prebuilt)'
 arch=('x86_64')
@@ -37,4 +37,4 @@ package() {
 }
 
 # Pinned by fansion314/aur after verifying the published release bytes.
-sha256sums=('6c60b0499b696dbab39c50b18126537f0be16719af9a8fbcc6bf398f9db49679' '919efe7dd0cd9371f976e35523503f0e0d2e6b8c0c5bc524c7efc1b0572e8ab9')
+sha256sums=('5819ec72d27a0a19375cb0ad60bdb57e3a28f1fe91e6c1a068bdb649144a9bdb' 'abb72a9d3ad2cca05e3706f4824330a95802c97d11a42844295c2a7dc22337bc')

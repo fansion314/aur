@@ -1,111 +1,111 @@
 {
   "repository": "fansion314/dnr",
-  "reference": "09b2e0803b0f0b8403e74c6921ef3487c56ffe61",
+  "reference": "45b8ca4649dbf2e9c9c9872015eedb2a7b52cf61",
   "packages": {
     "dnr": {
-      "version": "0:0.5.4-1",
+      "version": "0:0.5.5-1",
       "files": {
-        ".SRCINFO": "b5e6b709fbee871d3cc891b737d71cc14d190b971489f31a2b5f55abedf367fe",
-        "PKGBUILD": "0522510ced2a54bdfca842bebe858c264c3a45ed5020c3662e5edfc94bbdb09b"
+        ".SRCINFO": "71cf277d7b1a970adfcd76c4b0bb1a0c21a3a95bec18c48793e33e70d1197e9f",
+        "PKGBUILD": "ccda0adda5279bb97521bb132f2ec772b6d1b3b4efbc04fb3b22645a9e02f058"
       },
       "assets": []
     },
     "dnr-bin": {
-      "version": "0:0.5.4-1",
+      "version": "0:0.5.5-1",
       "files": {
-        ".SRCINFO": "a42fe829ad7f56aa7d928abbc2f3d4c63df47786140f16f257ec8ba15fb0b121",
-        "PKGBUILD": "193652497c37478221831631b93412e5529a907dcae3a7e45b6c99bcdb138944"
+        ".SRCINFO": "3f3cf20fffc94e3f572ccbe8cb937e6b45f2be49fca2c29572d90d87513d4284",
+        "PKGBUILD": "ce76c6727f6b57cec4c7abee21dc88540812465de392a2793352841393d79bfd"
       },
       "assets": [
         {
-          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.4/dnr-0.5.4-1-x86_64.pkg.tar.zst",
-          "sha256": "c75006e2997130a77ace0ee6a20a1d9361894a257e308c68e071f0bab9b75bd5",
-          "size": 35097041
+          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.5/dnr-0.5.5-1-x86_64.pkg.tar.zst",
+          "sha256": "81c41362d9155f85cf1226dabf3b1f0502a980541459461b34041f39a3f26e74",
+          "size": 35103143
         },
         {
-          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.4/dnr-0.5.4-1-x86_64.pkg.tar.zst.sha256",
-          "sha256": "bf0f11590b33c870f64f7689359281cdc678e4c96e925fb70401e7f5bfa14de7",
+          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.5/dnr-0.5.5-1-x86_64.pkg.tar.zst.sha256",
+          "sha256": "8e52cf165500f048305162a1a15adc82c697fc24f442e652cd6afb4072f01b77",
           "size": 97
         }
       ]
     },
     "dnr-cef": {
-      "version": "0:0.5.4-1",
+      "version": "0:0.5.5-1",
       "files": {
-        ".SRCINFO": "57f8508b5601662ca84d2a5808f51870b8da8918225ec55908ec51328930d710",
-        "PKGBUILD": "ec79656dbe870e279ec83e5931165735b49cccbc741375f7f428c523207a728a"
+        ".SRCINFO": "8443bb4e3a619ecc88d1667dec67c5e154e44aff33bbf65b44d1eb03192473bb",
+        "PKGBUILD": "4719f8f70b2bb99d200db368881510ccc483692aaad2b11ef1dcff31f22b67e5"
       },
       "assets": []
     },
     "dnr-cef-bin": {
-      "version": "0:0.5.4-1",
+      "version": "0:0.5.5-1",
       "files": {
-        ".SRCINFO": "55b2627b9062df2d688e3a924720f5acbf57201e21834960486836680ed0a500",
-        "PKGBUILD": "c4f368c9bd24e3ed1b6e964d5b79bd62ce5124590e0e459549a7a3f8cbd482cf"
+        ".SRCINFO": "206c0e11464a74089e01cbc371e04b52af315224aeed70ec1a0036e467267da9",
+        "PKGBUILD": "1c8b5fc07f1224cee7e2fcd60d8472e7e7b7879b302c08071c98e387cde1a315"
       },
       "assets": [
         {
-          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.4/dnr-cef-0.5.4-1-x86_64.pkg.tar.zst",
-          "sha256": "44c3ca8a7f7143bb5c86e340f29e26f017ab4638af788fdff4e34ec578f7e78f",
-          "size": 35016096
+          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.5/dnr-cef-0.5.5-1-x86_64.pkg.tar.zst",
+          "sha256": "b8a1d28000a0c98659d451112b21231ec6d296579b3807b295380d320361e65a",
+          "size": 35014810
         },
         {
-          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.4/dnr-cef-0.5.4-1-x86_64.pkg.tar.zst.sha256",
-          "sha256": "4101423642c88196f4acd75b30952890f66db887b352749a5e4e52e1dba528f8",
+          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.5/dnr-cef-0.5.5-1-x86_64.pkg.tar.zst.sha256",
+          "sha256": "adae5ed47e3db32ba014e726f56c6b7a1244cd948017156948e8693b9f267cd8",
           "size": 101
         }
       ]
     },
     "dnr-webview": {
-      "version": "0:0.5.4-1",
+      "version": "0:0.5.5-1",
       "files": {
-        ".SRCINFO": "5c3f7f02e529575bc10ce5e7563a00b9ed63eb9a79dc149ba2894d7d7701b5d5",
-        "PKGBUILD": "d0abe031bf43dd2dec1050927d9f204be618484f1b5f36b22efb9b96b4fafc8d"
+        ".SRCINFO": "fea558dcb8d174e0bdebce5814686d05c27f95452509ba279dfcb40debfa0df1",
+        "PKGBUILD": "264f296bea582649d3b8f897df0fc69d99086ccf9acd12cce072fc5207c3d83b"
       },
       "assets": []
     },
     "dnr-webview-bin": {
-      "version": "0:0.5.4-1",
+      "version": "0:0.5.5-1",
       "files": {
-        ".SRCINFO": "8ef9580e23db89270ef8a21b9341c8f5d450952ec823faa434741acc47f8655a",
-        "PKGBUILD": "289d5d0b82fcb690aec8f70e24da3ebef57c386f4a0b317ddf33552eabf9fc11"
+        ".SRCINFO": "eddbb21e491a0fcfd421acf707987306060466648a887e8e48806d2cb060b9c4",
+        "PKGBUILD": "fac35585799f99105d7ed74f35093daeb20a5b57160c7a6afdc61878bc615acf"
       },
       "assets": [
         {
-          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.4/dnr-webview-0.5.4-1-x86_64.pkg.tar.zst",
-          "sha256": "c1fe3b53c028f8f102dd7fccda1675890d245ca127c7704155665e1524e10afb",
-          "size": 34531720
+          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.5/dnr-webview-0.5.5-1-x86_64.pkg.tar.zst",
+          "sha256": "db25ae9978c7894b63bb7dce7748cc0911ac858bb44fcc0ecc8696674c45df82",
+          "size": 34527661
         },
         {
-          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.4/dnr-webview-0.5.4-1-x86_64.pkg.tar.zst.sha256",
-          "sha256": "b72634f6845f38463778626cc3b71dd8a86a77019aac7320d2b59d7848389dac",
+          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.5/dnr-webview-0.5.5-1-x86_64.pkg.tar.zst.sha256",
+          "sha256": "154607704fa1c19b4cda278639bc60f5899cecd914cd6bc65185919c214cefdb",
           "size": 105
         }
       ]
     },
     "dnc": {
-      "version": "0:0.5.4-1",
+      "version": "0:0.5.5-1",
       "files": {
-        ".SRCINFO": "ff50fc0f4dc3b0789fd5051991c61992ccb40d1fcd559384443d58f81a173264",
-        "PKGBUILD": "13c98fa933634175e618a55d32ee9a981edebf52e2501f251002ba718c4036a7"
+        ".SRCINFO": "6a448b344d1fc59e0ba68606aaf3b639a517571be45ad256d10d836bac9e73a6",
+        "PKGBUILD": "2ec3e6d5a5a8747916c1417b9232f5312a92aa73dcc39ce68183b6a012c2873a"
       },
       "assets": []
     },
     "dnc-bin": {
-      "version": "0:0.5.4-1",
+      "version": "0:0.5.5-1",
       "files": {
-        ".SRCINFO": "b7c9632408711736c37f6457c880315452e87ea931afd22836231ba198317987",
-        "PKGBUILD": "f1d1a9f3a022e95cc03d3398c7c18d8e1d1da459b23f533135ae078c46b631a0"
+        ".SRCINFO": "ffb553e52598ae9965e5fa7d5cf21841db69ea5721fcad12c690bd47bb7a41ef",
+        "PKGBUILD": "9d4db9af698f8ee015c5387242e46ef090e2ff9f55d82c02aa862cd8f4442b09"
       },
       "assets": [
         {
-          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.4/dnc-0.5.4-1-x86_64.pkg.tar.zst",
-          "sha256": "6c60b0499b696dbab39c50b18126537f0be16719af9a8fbcc6bf398f9db49679",
-          "size": 2794166
+          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.5/dnc-0.5.5-1-x86_64.pkg.tar.zst",
+          "sha256": "5819ec72d27a0a19375cb0ad60bdb57e3a28f1fe91e6c1a068bdb649144a9bdb",
+          "size": 2794182
         },
         {
-          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.4/dnc-0.5.4-1-x86_64.pkg.tar.zst.sha256",
-          "sha256": "919efe7dd0cd9371f976e35523503f0e0d2e6b8c0c5bc524c7efc1b0572e8ab9",
+          "url": "https://github.com/fansion314/dnr/releases/download/v0.5.5/dnc-0.5.5-1-x86_64.pkg.tar.zst.sha256",
+          "sha256": "abb72a9d3ad2cca05e3706f4824330a95802c97d11a42844295c2a7dc22337bc",
           "size": 97
         }
       ]
